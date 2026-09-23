@@ -16,6 +16,12 @@ SYMBOLS = [
     "TCS.NS",
     "^NSEI",
     "^NSEBANK",
+    "^BSESN",
+    "CL=F",
+    "NG=F",
+    "SI=F",
+    "GC=F",
+    
 ]
 
 INTERVAL = "5m"
