@@ -15,9 +15,10 @@ SYMBOLS = [
     "RELIANCE.NS",
     "TCS.NS",
     "^NSEI",
+    "^NSEBANK",
 ]
 
-INTERVAL = "15m"
+INTERVAL = "5m"
 HMA_LENGTH = 100
 
 TELEGRAM_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
