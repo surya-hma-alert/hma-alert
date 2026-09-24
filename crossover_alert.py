@@ -52,6 +52,8 @@ def check_symbol(symbol: str) -> None:
     period = period_map.get(INTERVAL, "10d")
 
     data = yf.download(symbol, period=period, interval=INTERVAL, progress=False)
+    if isinstance(data.columns, pd.MultiIndex):
+        data.columns = data.columns.get_level_values(0)
     if data.empty or len(data) < HMA_LENGTH + 5:
         print(f"{symbol}: not enough data, skipping")
         return
