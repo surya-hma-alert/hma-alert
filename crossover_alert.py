@@ -12,15 +12,7 @@ import pandas as pd
 import yfinance as yf
 
 SYMBOLS = [
-    "RELIANCE.NS",
-    "TCS.NS",
     "^NSEI",
-    "^NSEBANK",
-    "^BSESN",
-    "CL=F",
-    "NG=F",
-    "SI=F",
-    "GC=F",
     
 ]
 
