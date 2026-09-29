@@ -1,0 +1,25 @@
+name: HMA Backtest
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repo checkout karo
+        uses: actions/checkout@v4
+
+      - name: Python setup karo
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Dependencies install karo
+        run: pip install -r requirements.txt
+
+      - name: Backtest chalao
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python backtest.py
